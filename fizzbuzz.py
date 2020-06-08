@@ -3,16 +3,23 @@
 # For numbers which are multiples of both three and five print "FizzBuzz".
 # hint: lets try with no modulus operator
 
-for n in range(1,101):
-    fizz = (n - 3 * (n // 3))
-    buzz = (n - 5 * (n // 5))
+def fizzbuzz(limit):
+    for n in range(1,limit):
+        fizz = (n - 3 * (n // 3))
+        buzz = (n - 5 * (n // 5))
 
-    out = str(n)
-    if fizz == 0 and buzz == 0:
-        print("FizzBuzz")
-    elif fizz == 0:
-        print("Fizz")
-    elif buzz == 0:
-        print("Buzz")
-    else:
-        print(out)
+        out = str(n)
+        if fizz == 0 and buzz == 0:
+            print("FizzBuzz")
+        elif fizz == 0:
+            print("Fizz")
+        elif buzz == 0:
+            print("Buzz")
+        else:
+            print(out)
+
+def main():
+    fizzbuzz(101)
+
+if __name__=='__main__':
+    main()
